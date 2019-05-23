@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-filestyle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body style="background-color:#ECF0F1">
+
+    <style>
+        .jumbotron {
+            position: relative;
+            height: 4vw;
+            border-radius: 0px;
+        }
+
+        .gal {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .head {
+            position: absolute;
+            top: 0px;
+            margin-left: 24vw;
+            color: white;
+        }
+
+        .help:hover {
+            color: #FA3F08;
+        }
+
+    </style>
+    <div class="jumbotron" style="background-color: #A40702 ;">
+
+        <div class="gal">
+            <a href="https://www.galgotiasuniversity.edu.in/">
+                <img src='https://www.galgotiasuniversity.edu.in/images/logo.jpg' />
+            </a>
+        </div>
+        <div class="head">
+            <h2 style="margin-top:0.5vw">Optimization of provisioning of storage resources in Cloud Computing using Machine Learning</h2>
+            <h6><span>Aditya Kumar Pandey/ Aryan Pandey</span>  <span style="margin-left:2vw;">Final Year Project 2018-19</span> <span style="margin-left:2vw;">Random Forest Decision Tree</span> </h6>
+        </div>
+
+    </div>
+
+
+    <form style="margin-left:25vw; margin-top:5vw; margin-bottom:5vw;" action="/upload" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label style="font-size:1.7vw;color:#0879FA">Enter the column numbers containing missing values  </label>
+            <input style="width:30%;margin-bottom:0.5vw" class="form-control" name="Column Containing Missing Values" type="text" value="" />
+            <div class="help">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span class="help-block">Enter if only there are missing values<br>If multiple, must enter comma separated</span>
+            </div>
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label style="font-size:1.7vw;color:#0879FA">Enter the column numbers containing categorical values in independent variables  </label>
+            <input style="width:30%;margin-bottom:0.5vw" class="form-control" name="Column Containing Categorical Values" type="text" value="" />
+            <div class="help">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span class="help-block">Enter if only there are categorical values<br>If multiple, must enter comma separated</span>
+            </div>
+        </div>
+            <br>
+
+            <div class="form-group" style="width:30%">
+                <label style="font-size:1.7vw;color:#0879FA">Upload your .csv file</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile" required>
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <input class="btn btn-success " type="Submit" />
+            </div>
+</form>
+
+
+</body>
+
+</html>

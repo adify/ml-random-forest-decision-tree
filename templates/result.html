@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>Uploaded Information</title>
+</head>
+<body style="background-color:#ECF0F1 ">
+    <style>
+
+        .jumbotron {
+            position: relative;
+            height: 4vw;
+            border-radius: 0px;
+        }
+
+        .gal {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .head {
+            position: absolute;
+            top: 0px;
+            margin-left: 24vw;
+            color: white;
+        }
+    </style>
+    <div class="jumbotron" style="background-color: #A40702 ;">
+
+        <div class="gal">
+            <a href="https://www.galgotiasuniversity.edu.in/">
+                <img src='https://www.galgotiasuniversity.edu.in/images/logo.jpg' />
+            </a>
+        </div>
+        <div class="head">
+            <h2 style="margin-top:0.5vw">Optimization of provisioning of storage resources in Cloud Computing using Machine Learning</h2>
+            <h6><span>Aditya Kumar Pandey/ Aryan Pandey</span>  <span style="margin-left:2vw;">Final Year Project 2018-19</span> <span style="margin-left:2vw;">Random Forest Decision Tree</span></h6>
+        </div>
+
+    </div>
+
+
+
+    <h2 style="border-bottom:solid; border-bottom-width:2px;color:#368BC1;">CSV File Contents</h2><br>
+    <div class=page>
+
+
+        {% for table in tables %}
+        {{ table|safe }}
+        {% endfor %}
+
+    </div>
+
+
+
+
+    <h2 style="border-bottom:solid; border-bottom-width:2px;color:#368BC1;">Prediction</h2><br>
+    <div class=page>
+
+
+        {% for res1 in res %}
+        {{ res1|safe }}
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>
